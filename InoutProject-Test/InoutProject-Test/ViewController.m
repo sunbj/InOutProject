@@ -18,5 +18,13 @@
     // Do any additional setup after loading the view.
 }
 
+- (NSInteger)sum:(NSInteger)a b:(NSInteger)b  {
+    
+    return a + b;
+    
+    
+    
+}
+
 
 @end
