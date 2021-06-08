@@ -4,6 +4,8 @@ xcode_scheme: InoutProject-TestTests
 xcode_destination: platform=iOS Simulator,OS=10.1,name=iPad Pro (9.7-inch)
 
 script:
-  - xctool -project {{InoutProject-Test.xcodeproj}} -scheme {{InoutProject-TestTests}} build test -sdk iphonesimulator GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+    - xcodebuild clean build -sdk iphonesimulator -workspace InoutProject-Test.xcworkspace -scheme InoutProject-TestTests CODE_SIGNING_REQUIRED=NO
+# script:
+#   - xctool -project {{InoutProject-Test.xcodeproj}} -scheme {{InoutProject-TestTests}} build test -sdk iphonesimulator GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
 after_success:
   - bash <(curl -s https://codecov.io/bash)
