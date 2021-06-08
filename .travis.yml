@@ -2,7 +2,7 @@ language: objective-c
 osx_image: xcode12.5
 
 script:
-    - xcodebuild clean build -sdk iphonesimulator -xcodeproj InoutProject-Test.xcodeproj -scheme InoutProject-TestTests CODE_SIGNING_REQUIRED=NO
+    - xcodebuild clean build -sdk iphonesimulator -xcodeproj InoutProject-Test/InoutProject-Test.xcodeproj -scheme InoutProject-TestTests CODE_SIGNING_REQUIRED=NO
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
