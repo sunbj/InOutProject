@@ -1,7 +1,9 @@
 language: objective-c
 xcode_project: InoutProject-Test.xcodeproj # path to your xcodeproj folder
-xcode_scheme: InoutProject-Test
+xcode_scheme: InoutProject-TestTests
 xcode_destination: platform=iOS Simulator,OS=10.1,name=iPad Pro (9.7-inch)
 
+script:
+  - xctool -project {{InoutProject-Test.xcodeproj}} -scheme {{InoutProject-TestTests}} build test -sdk iphonesimulator GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
 after_success:
--bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash)
