@@ -1,3 +1,3 @@
 # InOutProject
 test project
-https://travis-ci.com/sunbj/InOutProject.svg?branch=main
+[![Build Status](https://travis-ci.com/sunbj/InOutProject.svg?branch=main)](https://travis-ci.com/sunbj/InOutProject)
