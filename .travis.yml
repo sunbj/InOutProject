@@ -2,3 +2,6 @@ language: objective-c
 xcode_project: InoutProject-Test.xcodeproj # path to your xcodeproj folder
 xcode_scheme: InoutProject-TestTests
 xcode_destination: platform=iOS Simulator,OS=10.1,name=iPad Pro (9.7-inch)
+
+after_success:
+-bash <(curl -s https://codecov.io/bash)
