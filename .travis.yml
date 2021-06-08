@@ -1,5 +1,8 @@
 language: objective-c
+osx_image: xcode12.5
+
 script:
-  - xctool -project {{InoutProject-Test.xcodeproj}} -scheme {{InoutProject-TestTests}} build test -sdk iphonesimulator GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+    - xcodebuild clean build -sdk iphonesimulator -xcodeproj InoutProject-Test.xcodeproj -scheme InoutProject-TestTests CODE_SIGNING_REQUIRED=NO
+
 after_success:
   - bash <(curl -s https://codecov.io/bash)
