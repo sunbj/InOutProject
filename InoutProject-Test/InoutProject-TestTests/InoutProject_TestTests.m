@@ -33,7 +33,7 @@
     
     NSInteger sum = [self.vc sum:10 b:20];
     
-    XCTAssertEqual(sum, 20, @"计算错误，请查看。。。。。");
+    XCTAssertEqual(sum, 30, @"计算错误，请查看。。。。。");
     
     
     
